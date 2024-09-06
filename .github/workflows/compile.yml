@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: nekocodeX/GitHub-Action-Ahk2Exe@main
+      - uses: KamaranL/Ahk2Exe-action@v1
         with:
           in: ./src/index.ahk
           out: ./PowerToys.Run.WindowsKey.exe
