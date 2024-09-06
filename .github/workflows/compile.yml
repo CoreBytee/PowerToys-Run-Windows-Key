@@ -20,7 +20,7 @@ jobs:
           in: ./src/index.ahk
           out: ./PowerToys.Run.WindowsKey.exe
 
-      - run: ls
+      - run: ls ./src/
 
       - uses: actions/upload-artifact@v4
         with:
