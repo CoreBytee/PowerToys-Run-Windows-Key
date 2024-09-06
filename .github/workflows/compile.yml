@@ -25,4 +25,4 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: PowerToys.Run.WindowsKey
-          path: ./PowerToys.Run.WindowsKey.exe
+          path: ./src/PowerToys.Run.WindowsKey.exe
