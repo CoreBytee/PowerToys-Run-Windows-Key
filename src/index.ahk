@@ -20,14 +20,34 @@ LWin Up:: {
     if (otherKeyPress) {
         return
     }
+    killStartMenu()
     Send("!{Space}")
 }
 
 killStartMenu() {
+    if (!ProcessExist("StartMenuExperienceHost.exe")) {
+        return
+    }
     ProcessClose("StartMenuExperienceHost.exe")
+    ProcessWaitClose("StartMenuExperienceHost.exe")
+}
+
+focusPowertoysRun() {
+    if (!WinExist("PowerToys.PowerLauncher")) {
+        return
+    }
+    print("focus")
+    WinActivate("PowerToys.PowerLauncher")
+    if (!WinExist("a")) {
+        return
+    }
+    print(
+        WinGetTitle("A")
+    )
 }
 
 SetTimer(killStartMenu, 1)
+SetTimer(focusPowertoysRun, 1)
 
 
 hook := InputHook()
