@@ -8,7 +8,7 @@ global otherKeyPress := false
 ; LWin::!Space
 
 print(Text) {
-    FileAppend(Text, "*")
+    OutputDebug(Text)
 }
 
 LWin:: {
